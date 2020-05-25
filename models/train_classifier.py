@@ -1,4 +1,3 @@
-import sys
 import sys, pickle, re
 import pandas as pd
 import numpy as np
@@ -24,10 +23,10 @@ def load_data(database_filepath):
     table_name = 'messages_disaster'
     engine = create_engine(f"sqlite:///{database_filepath}")
     df = pd.read_sql_table(table_name,engine)
-    X = df["messages_disaster"]
-    y = df.drop(["message","id","genre","original"], axis=1)
-    category_names = y.columns
-    return X, y, category_names
+    X = df.message
+    Y = df.iloc[:,4:]
+    category_names = Y.columns
+    return X, Y, category_names
 
 
 def tokenize(text):
