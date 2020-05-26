@@ -1,5 +1,26 @@
 # Disaster Response Pipeline Project
 
+
+<h2>Introduction</h2>
+In this data science project we try to solve one of the imporatant problem. Following a disaster we got million and millions of communication either direct or throgh social media on the other hand disaster manage team has limited amount of team to give responce to every messages. So in this project we have take diffrent disaster messages in our data set. The dataset are label data set as its give a good accurecy. This data set will allow us to investigate properly during the distater and built a supervised machine learning algoritham. We are analysisng thousands of real messages which were send during natural disaster.
+
+The project is dived into diffrent parts 
+<h3>Part 1</h3>
+I have built an ETL pipeline whicch loaded messages and categories data from
+<p><b>Disaster_messages.csv</b> and <b>disaster_categories.csv</b>
+and then load them in proper sqllite database 
+In file <b>data</b> there is a python file <b>process_data.py</b></p>
+
+<h3>Part 2</h3>
+Machine learning pipeline will read data from the sqllite database and creat a multioutput supervised learning model
+<p>In file <b>model</b> there is a python file <b>train_classifier.py</b></p>
+
+<h3>Part 3</h3>
+Then your web app will extract data from this model and provide data visualization 
+<p>In file <b>app</b> there is a python file <b>run.py</b> and <b>templest</b> file where al the templets for the web app are present</p>
+
+
+
 <h2>Project Components</h2>
 There are three components you'll need to complete for this project.
 
