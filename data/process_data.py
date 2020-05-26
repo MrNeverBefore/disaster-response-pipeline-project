@@ -43,7 +43,7 @@ def clean_data(df):
 
 def save_data(df, database_filepath):
     engine = create_engine('sqlite:///' + database_filepath)
-    df.to_sql('messages_disaster', engine, index=False)
+    df.to_sql('messages_disaster', engine,if_exists='replace', index=False)
 
 def main():
     if len(sys.argv) == 4:
